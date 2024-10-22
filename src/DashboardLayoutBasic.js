@@ -81,21 +81,6 @@ const NAVIGATION = [
   },
 ];
 
-// Custom hook to manage routing
-function useDemoRouter(initialPath) {
-  const [pathname, setPathname] = React.useState(initialPath);
-
-  const router = React.useMemo(() => {
-    return {
-      pathname,
-      searchParams: new URLSearchParams(),
-      navigate: (path) => setPathname(String(path)),
-    };
-  }, [pathname]);
-
-  return router;
-}
-
 // Sidebar styles
 const SidebarContainer = styled('div')(({ theme, isMinimized }) => ({
   width: isMinimized ? '80px' : '280px',
@@ -133,13 +118,11 @@ const DropdownItem = styled('div')(({ theme }) => ({
 }));
 
 export default function DashboardLayoutBasic(props) {
-  const { window } = props;
   const [isMinimized, setIsMinimized] = React.useState(false);
   const [dropdownOpen, setDropdownOpen] = React.useState({
     workSpace: false,
     find: false,
   });
-  const router = useDemoRouter('/dashboard');
 
   return (
     <div style={{ display: 'flex' }}>
