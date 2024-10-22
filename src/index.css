@@ -1,0 +1,187 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* App.css */
+.main {
+  display: flex; 
+  height: 100vh; 
+  box-sizing: border-box; 
+}
+
+/* Drawer Styles */
+.drawer {
+  max-height: 60vh; 
+  border-radius: 15px; 
+  border: 1px solid #e0e0e0; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  overflow: hidden; 
+  padding: 20px; 
+  transition: all 0.3s ease; 
+}
+
+/* Dashboard Styles */
+.dashboard {
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  background-color: #fff; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 16px; 
+  overflow: hidden; 
+}
+
+/* Dashboard Nested Elements */
+.dashboard * {
+  box-sizing: border-box; 
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; 
+  padding: 10px 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.header p {
+  color: #6c757d;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header p span {
+  color: #8B0000;
+}
+
+.header-right{
+  display: flex;
+  align-items: center;
+}
+
+/* Notification Styles */
+.notification {
+  background-color: #f0f0f0; 
+  border-radius: 50%; 
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.notification svg {
+  font-size: 20px;
+  color: #333;
+}
+
+/* Profile Styles */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.profile img {
+  width: 40px; 
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile div {
+  font-size: 16px;
+}
+
+.profile svg {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.profile-dropdown div {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.profile-dropdown div:hover {
+  background-color: #f0f0f0;
+}
+
+/* Middle Section */
+.middle {
+  margin-top: 20px;
+}
+
+.middle h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.middle .banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column; 
+  }
+
+  .drawer {
+    max-height: 40vh; 
+  }
+
+  .dashboard {
+    padding: 10px; 
+  }
+
+  .header {
+    flex-direction: column; 
+    align-items: flex-start;
+  }
+}
