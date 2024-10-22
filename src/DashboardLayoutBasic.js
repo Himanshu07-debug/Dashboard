@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { extendTheme, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import DescriptionIcon from '@mui/icons-material/Description';
 import IconButton from '@mui/material/IconButton';
